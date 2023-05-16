@@ -1,0 +1,110 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Arial Black;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.movie-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.movie-form-title {
+  grid-column: span 3;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.movie-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.movie-form input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+.actionBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  grid-column: span 3;
+}
+
+.createBtn,
+.updateBtn,
+.deleteBtn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.createBtn {
+  background-color: #17a607;
+}
+
+.createBtn:hover {
+  background-color: #068016;
+}
+
+.updateBtn {
+  background-color: #007bff;
+}
+
+.updateBtn:hover {
+  background-color: #0056b3;
+}
+
+.deleteBtn {
+  background-color: #d4432a;
+}
+
+.deleteBtn:hover {
+  background-color: #900a05;
+}
+
+.notification {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.notification.success {
+  background-color: #4caf50;
+}
+
+.notification.error {
+  background-color: #f44336;
+}

@@ -91,7 +91,7 @@ app.delete("/movies/:id", async (req, res) => {
     if (movie == null) {
       return res.status(404).json({ message: "Cannot find movie" });
     }
-    await movie.remove();
+    await Movie.findByIdAndDelete(req.params.id);
     res.json({ message: "Deleted Movie" });
   } catch (err) {
     res.status(500).json({ message: err.message });

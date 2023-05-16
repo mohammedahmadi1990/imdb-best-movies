@@ -1,8 +1,8 @@
 import React from "react";
 
-const MovieItem = ({ movie }) => {
+const MovieItem = ({ movie, setSelectedMovie }) => {
   return (
-    <tr>
+    <tr onClick={() => setSelectedMovie(movie)}>
       <td>
         <img src={movie.Poster_Link} alt={movie.Series_Title} />
       </td>
@@ -16,6 +16,7 @@ const MovieItem = ({ movie }) => {
       </td>
       <td>{movie.No_of_Votes}</td>
       <td>{movie.Gross}</td>
+      <td style={{ display: "none" }}>{movie._id}</td> {/* Hidden ID field */}
     </tr>
   );
 };
